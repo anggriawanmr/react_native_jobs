@@ -22,8 +22,20 @@ const Home = () => {
           headerLeft: () => (
             <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
           ),
+          headersRight: () => (
+            <ScreenHeaderBtn iconUrl={icons.profile} dimension="100%" />
+          ),
+          headerTitle: '',
         }}
       />
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={{ flex: 1, padding: SIZES.medium }}>
+          <Welcome />
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
