@@ -18,6 +18,7 @@ const Popularjobs = () => {
   const { data, isLoading, error } = useFetch('search', {
     query: 'Junior developer',
     num_pages: '1',
+    remote_jobs_only: 'true',
   });
 
   const [selectedJob, setSelectedJob] = useState();
